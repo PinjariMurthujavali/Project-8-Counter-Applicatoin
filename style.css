@@ -1,0 +1,90 @@
+/* Global Styles */
+* {
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: sans-serif; /* Set the default font to sans-serif */
+}
+
+/* Body Styles */
+body {
+    background: linear-gradient(-45deg, #ffafbd, #ffc3ac, #2193b0, #6dd5ed, orange, aqua, skyblue); /* Gradient background with multiple colors */
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+    color: #333; /* Set text color */
+    line-height: 1.5; /* Increase line height for better readability */
+    display: grid; /* Use grid layout to center the container */
+    place-items: center; /* Center items both vertically and horizontally */
+}
+
+/* Background Animation */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%; /* Start gradient at the left */
+    }
+    50% {
+        background-position: 100% 50%; /* Shift gradient to the right */
+    }
+    100% {
+        background-position: 0% 50%; /* Return gradient to the left */
+    }
+}
+
+/* Container Styles */
+.container {
+    background-color: #fff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    text-align: center; /* Center-align text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+    animation: containerAnimation 1s ease-in-out; /* Fade-in and slide-down animation */
+}
+
+/* Animation for the Container */
+@keyframes containerAnimation {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Start slightly above its final position */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* End at its final position */
+    }
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 36px; /* Large font size for the heading */
+    margin-bottom: 12px; /* Space below the heading */
+}
+
+/* Counter Value Styles */
+#value {
+    font-size: 72px; /* Large font size for the counter value */
+    font-weight: bold; /* Bold font */
+    color: #007bff; /* Default color: blue */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color changes */
+}
+
+/* Negative Counter Value Styles */
+#value.negative {
+    color: red; /* Change color to red when counter is negative */
+}
+
+/* Button Styles */
+.btn {
+    text-transform: uppercase; /* Convert button text to uppercase */
+    background: #007bff; /* Default background color: blue */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 18px; /* Medium font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 8px; /* Space between buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background 0.3s ease-in-out; /* Smooth transition for background changes */
+}
+
+/* Hover Effect for Buttons */
+.btn:hover {
+    background-color: #0056b3; /* Darken the button background on hover */
+}
